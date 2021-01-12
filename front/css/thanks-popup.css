@@ -1,0 +1,78 @@
+/*==============================
+|	|	|	General
+================================*/
+
+html,
+body {
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+}
+
+section {
+	overflow: hidden;
+}
+
+/*==============================
+|	|	|	modal
+================================*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal {
+	top: 150px;
+}
+
+#heading-img {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.modal-header {
+	border-bottom: none;
+	position: relative;
+}
+
+.modal-body {
+	background: #fff;
+	border-radius: 3px;
+	margin: 0;
+	padding: 18px 55px 0 40px;
+	position: relative;
+	width: auto;
+}
+
+.modal-body h2 {
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #6255a5;
+	margin: 0;
+	padding: 0 0 30px 0;
+	text-align: center;
+}
+
+.modal-body p > span {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	color: #333333;
+}
+
+.modal-body p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #333333;
+	padding-bottom: 30px;
+	margin: 0;
+}
+
+#close-btn .field-icon {
+	position: absolute;
+	right: 15px;
+	z-index: 3;
+	cursor: pointer;
+}
