@@ -13,7 +13,7 @@
 
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="../images/Admin_images/fav-icon.png">
+	<link rel="shortcut icon" href="../images/Admin_images/favicon.ico">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -57,28 +57,57 @@
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 						<ul class="nav navbar-nav pull-right">
 							<li class="nav-item">
-								<a class="item" href="search-notes.html">Search Notes</a>
+								<a class="item" href="dashboard.html">Dashboard</a>
+							</li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="notesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Notes
+									</a>
+									<div class="dropdown-menu" aria-labelledby="notesMenuLink">
+										<a class="dropdown-item" href="notes-under-review.html">Notes Under Review</a>
+										<a class="dropdown-item" href="published-notes.html">Published Notes</a>
+										<a class="dropdown-item" href="downloads.html">Dwnloaded Notes</a>
+										<a class="dropdown-item" href="rejected-notes.html">Rejected Notes</a>
+									</div>
+								</div>
 							</li>
 							<li class="nav-item">
-								<a class="item" href="add-notes.html">Sell Your Notes</a>
+								<a class="item" href="members.html">Members</a>
 							</li>
 							<li class="nav-item">
-								<a class="item" href="buyer-request.html">Buyer Request</a>
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="reportsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Reports
+									</a>
+
+									<div class="dropdown-menu" aria-labelledby="reportsMenuLink">
+										<a class="dropdown-item" href="spam-reports.html">Spam Reports</a>
+									</div>
+								</div>
 							</li>
-							<li class="nav-item">
-								<a class="item" href="faq.html">FAQ</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="contact-us.html">Contact Us</a>
+                            <li class="nav-item">
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="settingMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Settings
+									</a>
+									<div class="dropdown-menu" aria-labelledby="settingMenuLink">
+										<a class="dropdown-item" href="manage-system-config.html">Manage System Configuration</a>
+										<a class="dropdown-item" href="manage-administrator.html">Manage Administrator</a>
+										<a class="dropdown-item" href="manage-category.html">Manage Category</a>
+										<a class="dropdown-item" href="manage-type.html">Manage Type</a>
+										<a class="dropdown-item" href="manage-country.html">Manage Countries</a>
+									</div>
+								</div>
 							</li>
 							<li>
 								<div class="dropdown">
-									<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="../images/Admin_images/user-img.png" alt="user image" class="user-img img-responsive rounded-circle">
+									<a class="" href="#" role="button" id="userMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<img src="../images/Admin_images/user-img.png" alt="user image" class="img-responsive rounded-circle">
 									</a>
-									
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    									<a class="dropdown-item" href="update-profile.html">update profile</a>
+
+									<div class="dropdown-menu" aria-labelledby="userMenuLink">
+										<a class="dropdown-item" href="update-profile.html">update profile</a>
 										<a class="dropdown-item" href="change-password.html">change password</a>
 										<a class="dropdown-item logout-btn" href="login.html">logout</a>
 									</div>
@@ -89,7 +118,7 @@
 							</li>
 						</ul>
 					</div>
-					
+
 					<!-- Mobile Menu-->
 					<div id="mobile-nav">
 
@@ -98,37 +127,64 @@
 
 						<div id="mobile-nav-content">
 							<ul class="nav">
-							<li class="nav-item">
-								<a class="item" href="search-notes.html">Search Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="add-notes.html">Sell Your Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="buyer-request.html">Buyer Request</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="faq.html">FAQ</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="contact-us.html">Contact Us</a>
-							</li>
-							<li>
-								<div class="dropdown">
-									<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="../images/Admin_images/user-img.png" alt="user image" class="user-img img-responsive rounded-circle">
-									</a>
-									
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    									<a class="dropdown-item" href="update-profile.html">update profile</a>
-										<a class="dropdown-item" href="change-password.html">change password</a>
-										<a class="dropdown-item logout-btn" href="login.html">logout</a>
-									</div>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="btn btn-primary" href="#" type="button" role="button">Logout</a>
-							</li>
+								<li class="nav-item">
+								    <a class="item" href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+									   <a class="" href="#" role="button" id="notesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								            Notes
+									   </a>
+									   <div class="dropdown-menu" aria-labelledby="notesMenuLink">
+										  <a class="dropdown-item" href="notes-under-review.html">Notes Under Review</a>
+                                           <a class="dropdown-item" href="published-notes.html">Published Notes</a>
+										  <a class="dropdown-item" href="downloads.html">Dwnloaded Notes</a>
+                                           <a class="dropdown-item" href="rejected-notes.html">Rejected Notes</a>
+                                        </div>
+								    </div>
+                                </li>
+				                <li class="nav-item">
+                                <a class="item" href="members.html">Members</a>
+                                </li>
+				                <li class="nav-item">
+                                    <div class="dropdown">
+				                        <a class="" href="#" role="button" id="reportsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Reports
+								        </a>
+				                        <div class="dropdown-menu" aria-labelledby="reportsMenuLink">
+								            <a class="dropdown-item" href="spam-reports.html">Spam Reports</a>
+				                        </div>
+                                    </div>
+				                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+								        <a class="" href="#" role="button" id="settingMenuLink" data-toggle="dropdown" aria-haspopup="true"   aria-expanded="false">
+                                            Settings
+								        </a>
+								        <div class="dropdown-menu" aria-labelledby="settingMenuLink">
+								            <a class="dropdown-item" href="manage-system-config.html">Manage System Configuration</a>
+                                            <a class="dropdown-item" href="manage-administrator.html">Manage Administrator</a>
+                                            <a class="dropdown-item" href="manage-category.html">Manage Category</a>
+								            <a class="dropdown-item" href="manage-type.html">Manage Type</a>
+                                            <a class="dropdown-item" href="manage-country.html">Manage Countries</a>
+								        </div>
+				                    </div>
+				                </li>
+				                <li>
+                                    <div class="dropdown">
+                                        <a class="" href="#" role="button" id="userMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								        <img src="../images/Admin_images/user-img.png" alt="user image" class="img-responsive rounded-circle">
+				                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="userMenuLink">
+                                            <a class="dropdown-item" href="update-profile.html">update profile</a>
+                                            <a class="dropdown-item" href="change-password.html">change password</a>
+				                            <a class="dropdown-item logout-btn" href="login.html">logout</a>
+				                        </div>
+				                    </div>
+				                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary" href="login.html" type="button" role="button">Logout</a>
+				                </li>
 							</ul>
 						</div>
 					</div>
@@ -199,20 +255,33 @@
 			<div class="container">
         
         		<div class="row dashboard-published-notes-heading">
-					<div class="col-lg-4 col-md-12 col-sm-12 search-filter">
+					<div class="col-lg-4 col-md-4 col-sm-12 search-filter">
 						<h3 class="heading">Published Notes</h3>
 					</div>
-					<div class="col-lg-8 col-md-12 col-sm-12 text-right">	
+					<div class="col-lg-8 col-md-8 col-sm-12 text-right">	
 						<span toggle="#search" class="fa fa-search field-icon"></span>
 						<input class="myInput" placeholder="Search" type="search" id="dashboard-published-notes-search" value="">
-						<a class="btn" href="" role="button" id="dashboard-published-notes-search-btn">search</a>
-						<input class="myInput" placeholder="select-month" type="text" id="dashboard-published-notes-month" value="">
-						<img src="../images/Admin_images/arrow-down.png" id="dashboard-published-notes-month-arrow" class="arrow" alt="">
+						<a class="btn" href="" role="button" id="dashboard-published-notes-search-btn">search</a>						
+							<select class="myInput" id="dashboard-published-notes-month">
+								<option value="" disabled selected>Select-Month</option>
+								<option value="01">January</option>
+								<option value="02">February</option>
+								<option value="03">March</option>
+								<option value="04">April</option>
+								<option value="05">May</option>
+								<option value="06">June</option>
+								<option value="07">July</option>
+								<option value="08">August</option>
+								<option value="09">Septembrt</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</select>
 					</div>
 				</div>
 				
 				<!-- data table -->
-				<table id="dashboard-published-notes-table" class="datatable table table-responsive display">
+				<table id="dashboard-published-notes-table" class="datatable table-responsive display">
                     <thead>
                         <tr>
                         	<th>SR No.</th>

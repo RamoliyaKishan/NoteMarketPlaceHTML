@@ -69,9 +69,6 @@ p.pera {
 header .container-fluid {
 	margin: 0 100px;
 }
-header .container {
-}
-
 .navbar {
 	margin: 0;
 	padding: 30px 0;
@@ -326,29 +323,8 @@ h2.heading {
 	border: 1px solid #6255a5;
 }
 
-/*profile picture image*/
-
-.image-upload > input
-{
-    display: none;
-}
-
-.image-upload label.myInput img {
-	width: 50px;
-	height: 46px;
-    cursor: pointer;
-}
-
-.image-upload label.myInput p {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	color: #adb5bd;
-} 
-
-.image-upload label.myInput{
-	padding-top: 17px;
-	height: 100px;
+.text-left h2.heading {
+	margin-bottom: 40px;
 }
 
 label.myInput.last {

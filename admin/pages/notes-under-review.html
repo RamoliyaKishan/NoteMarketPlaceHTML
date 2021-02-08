@@ -46,38 +46,67 @@
 				<div class="container">
 
 					<!-- logo -->
-					<a class="navbar-brand" href="#">
-						<img src="../images/Admin_images/logo.png" alt="logo">
-					</a>
+						<a class="navbar-brand" href="#">
+							<img src="../images/Admin_images/logo.png" alt="logo">
+						</a>
 
-					<!-- Mobile Menu Open Button -->
-					<span id="mobile-nav-open-btn">&#9776;</span>
+						<!-- Mobile Menu Open Button -->
+						<span id="mobile-nav-open-btn">&#9776;</span>
 
 					<!-- Main Menu-->
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 						<ul class="nav navbar-nav pull-right">
 							<li class="nav-item">
-								<a class="item" href="search-notes.html">Dashboard</a>
+								<a class="item" href="dashboard.html">Dashboard</a>
+							</li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="notesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Notes
+									</a>
+									<div class="dropdown-menu" aria-labelledby="notesMenuLink">
+										<a class="dropdown-item" href="notes-under-review.html">Notes Under Review</a>
+										<a class="dropdown-item" href="published-notes.html">Published Notes</a>
+										<a class="dropdown-item" href="downloads.html">Dwnloaded Notes</a>
+										<a class="dropdown-item" href="rejected-notes.html">Rejected Notes</a>
+									</div>
+								</div>
 							</li>
 							<li class="nav-item">
-								<a class="item" href="add-notes.html">Notes</a>
+								<a class="item" href="members.html">Members</a>
 							</li>
 							<li class="nav-item">
-								<a class="item" href="buyer-request.html">Members</a>
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="reportsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Reports
+									</a>
+
+									<div class="dropdown-menu" aria-labelledby="reportsMenuLink">
+										<a class="dropdown-item" href="spam-reports.html">Spam Reports</a>
+									</div>
+								</div>
 							</li>
-							<li class="nav-item">
-								<a class="item" href="faq.html">Reports</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="contact-us.html">Setting</a>
+                            <li class="nav-item">
+                                <div class="dropdown">
+									<a class="item" href="#" role="button" id="settingMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Settings
+									</a>
+									<div class="dropdown-menu" aria-labelledby="settingMenuLink">
+										<a class="dropdown-item" href="manage-system-config.html">Manage System Configuration</a>
+										<a class="dropdown-item" href="manage-administrator.html">Manage Administrator</a>
+										<a class="dropdown-item" href="manage-category.html">Manage Category</a>
+										<a class="dropdown-item" href="manage-type.html">Manage Type</a>
+										<a class="dropdown-item" href="manage-country.html">Manage Countries</a>
+									</div>
+								</div>
 							</li>
 							<li>
 								<div class="dropdown">
-									<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<a class="" href="#" role="button" id="userMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<img src="../images/Admin_images/user-img.png" alt="user image" class="img-responsive rounded-circle">
 									</a>
 
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<div class="dropdown-menu" aria-labelledby="userMenuLink">
 										<a class="dropdown-item" href="update-profile.html">update profile</a>
 										<a class="dropdown-item" href="change-password.html">change password</a>
 										<a class="dropdown-item logout-btn" href="login.html">logout</a>
@@ -99,40 +128,67 @@
 						<div id="mobile-nav-content">
 							<ul class="nav">
 								<li class="nav-item">
-									<a class="item" href="search-notes.html">Dashboard</a>
-								</li>
-								<li class="nav-item">
-									<a class="item" href="add-notes.html">Notes</a>
-								</li>
-								<li class="nav-item">
-									<a class="item" href="buyer-request.html">Members</a>
-								</li>
-								<li class="nav-item">
-									<a class="item" href="faq.html">Reports</a>
-								</li>
-								<li class="nav-item">
-									<a class="item" href="contact-us.html">Setting</a>
-								</li>
-								<li>
-									<div class="dropdown">
-										<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<img src="../images/Admin_images/user-img.png" alt="user image" class="img-responsive rounded-circle">
-										</a>
-
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-											<a class="dropdown-item" href="update-profile.html">update profile</a>
-											<a class="dropdown-item" href="change-password.html">change password</a>
-											<a class="dropdown-item logout-btn" href="login.html">logout</a>
-										</div>
-									</div>
-								</li>
-								<li class="nav-item">
-									<a class="btn btn-primary" href="login.html" type="button" role="button">Logout</a>
-								</li>
+								    <a class="item" href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+									   <a class="" href="#" role="button" id="notesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								            Notes
+									   </a>
+									   <div class="dropdown-menu" aria-labelledby="notesMenuLink">
+										  <a class="dropdown-item" href="notes-under-review.html">Notes Under Review</a>
+                                           <a class="dropdown-item" href="published-notes.html">Published Notes</a>
+										  <a class="dropdown-item" href="downloads.html">Dwnloaded Notes</a>
+                                           <a class="dropdown-item" href="rejected-notes.html">Rejected Notes</a>
+                                        </div>
+								    </div>
+                                </li>
+				                <li class="nav-item">
+                                <a class="item" href="members.html">Members</a>
+                                </li>
+				                <li class="nav-item">
+                                    <div class="dropdown">
+				                        <a class="" href="#" role="button" id="reportsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Reports
+								        </a>
+				                        <div class="dropdown-menu" aria-labelledby="reportsMenuLink">
+								            <a class="dropdown-item" href="spam-reports.html">Spam Reports</a>
+				                        </div>
+                                    </div>
+				                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+								        <a class="" href="#" role="button" id="settingMenuLink" data-toggle="dropdown" aria-haspopup="true"   aria-expanded="false">
+                                            Settings
+								        </a>
+								        <div class="dropdown-menu" aria-labelledby="settingMenuLink">
+								            <a class="dropdown-item" href="manage-system-config.html">Manage System Configuration</a>
+                                            <a class="dropdown-item" href="manage-administrator.html">Manage Administrator</a>
+                                            <a class="dropdown-item" href="manage-category.html">Manage Category</a>
+								            <a class="dropdown-item" href="manage-type.html">Manage Type</a>
+                                            <a class="dropdown-item" href="manage-country.html">Manage Countries</a>
+								        </div>
+				                    </div>
+				                </li>
+				                <li>
+                                    <div class="dropdown">
+                                        <a class="" href="#" role="button" id="userMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								        <img src="../images/Admin_images/user-img.png" alt="user image" class="img-responsive rounded-circle">
+				                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="userMenuLink">
+                                            <a class="dropdown-item" href="update-profile.html">update profile</a>
+                                            <a class="dropdown-item" href="change-password.html">change password</a>
+				                            <a class="dropdown-item logout-btn" href="login.html">logout</a>
+				                        </div>
+				                    </div>
+				                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary" href="login.html" type="button" role="button">Logout</a>
+				                </li>
 							</ul>
 						</div>
 					</div>
-
+					
 				</div>
 			</nav>
 		</div>
@@ -174,7 +230,7 @@
                             <th></th>
                             <th>Published Date</th>
                             <th>Status</th>
-                            <th>action</th>
+                            <th style="width: 300%;">action</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -202,9 +258,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -231,9 +286,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
+											<a class="dropdown-item" href="#">View More Details</a>
     										<a class="dropdown-item" href="#">download Notes</a>
-    										<a class="dropdown-item" href="#">View More Details</a>
 										</div>
 									</div>
                                 </span>
@@ -260,9 +314,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -289,9 +342,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -318,9 +370,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -347,9 +398,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -376,9 +426,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -405,9 +454,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -434,9 +482,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -463,9 +510,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -492,9 +538,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>
@@ -521,9 +566,8 @@
 										</a>
 									
 										<div class="dropdown-menu" aria-labelledby="downloads-notes-menu" >
-    										<a class="dropdown-item" href="#">Aprove</a>
-    										<a class="dropdown-item" href="#">download Notes</a>
     										<a class="dropdown-item" href="#">View More Details</a>
+    										<a class="dropdown-item" href="#">download Notes</a>
 										</div>
 									</div>
                                 </span>

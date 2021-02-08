@@ -73,9 +73,6 @@ div.container {
 header .container-fluid {
 	margin: 0 100px;
 }
-header .container {
-	width: auto;
-}
 
 .navbar {
 	margin: 0;
