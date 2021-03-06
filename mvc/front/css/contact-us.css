@@ -68,8 +68,9 @@ p.pera {
 header .container-fluid {
 	margin: 0 100px;
 }
-header .container {
+header div.container {
 	width: auto;
+    padding: 0;
 }
 
 .navbar {
@@ -131,6 +132,45 @@ ul.navbar-nav > li a.btn:hover {
 	outline: none;
 	background-color: darkslateblue;
 }
+
+/* Profiel Dropdown */
+.user-img {
+        height: 40px;
+        width: 40px;
+    }
+.dropdown-menu {
+	padding: 20px 0;
+	border: none;
+	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	z-index: 4;
+}
+
+.dropdown a.dropdown-item {
+	margin: 0	;
+	color: #333333;
+	text-transform: capitalize;
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	padding: 0 50px 0 30px;
+} 
+
+.dropdown a.dropdown-item:hover, .dropdown a.dropdown-item:focus {
+	margin: 0;
+	color: #fff;
+	background-color: #6255a5;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.dropdown a.logout-btn {
+	color: #6255a5;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
 
 /*==============================
 |	|	|	Mobile Menu
@@ -245,14 +285,9 @@ ul.navbar-nav > li a.btn:hover {
 |	|	|	footer
 ================================*/
 
-footer .container-fluid{
-	width: 1440px;
-}
-
 footer .content-box-lg {
 	border-top: 2px solid #d1d1d1;
 	padding: 40px 0;
-	margin-top: 50px;
 }
 
 footer p.pera {
@@ -261,6 +296,8 @@ footer p.pera {
 	line-height: 18px;
 	padding-top: 10px;
 }
+
+/* Social Icons */
 
 /* Social Icons */
 
@@ -305,7 +342,6 @@ ul.social-list li:nth-child(3) a:hover {
 	background-color: #0077b5;
 	border-color: transparent;
 }
-
 /*==============================
 |	|	|	User Profile Img
 ================================*/
@@ -389,6 +425,7 @@ p.pera{
 }
 .myForm #comment[value] {
 	padding-top: 10px;
+    color: #000;
 }
 
 /*remove bottom margin*/
@@ -402,48 +439,25 @@ p.pera{
 	margin-top: 30px;
 	display: block;
 }
-/* Profiel Dropdown */
-.user-img {
-        height: 40px;
-        width: 40px;
-    }
-.dropdown-menu {
-	padding: 20px 0;
-	border: none;
-	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
-	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
-	z-index: 4;
-}
-
-.dropdown a.dropdown-item {
-	margin: 0	;
-	color: #333333;
-	text-transform: capitalize;
-	background-color: #fff;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 30px;
-	padding: 0 50px 0 30px;
-} 
-
-.dropdown a.dropdown-item:hover, .dropdown a.dropdown-item:focus {
-	margin: 0;
-	color: #fff;
-	background-color: #6255a5;
-	-webkit-transition: all .3s linear;
-	transition: all .3s linear;
-}
-
-.dropdown a.logout-btn {
-	color: #6255a5;
-	text-transform: uppercase;
-	font-weight: 600;
-}
-
 
 /*==================================================
 			Bootstrap 3 Media Queries        
 ==================================================*/
+
+/* Large Devices (Desktops & Laptops) */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    ul.navbar-nav > li a {
+		font-size: 14px;
+		margin-left: 25px;
+	}
+	ul.navbar-nav > li a.btn {
+		font-size: 14px;
+		margin-left: 25px;
+		height: 35px;
+		width: 80px;
+	}
+}
 
 /* Medium Devices (Landscape Tablets & Medium Desktops) */
 
@@ -565,6 +579,7 @@ p.pera{
 		height: 30px;
 		margin-left: 15px;
 	}
+	
 	
 	/*Footer*/
 	

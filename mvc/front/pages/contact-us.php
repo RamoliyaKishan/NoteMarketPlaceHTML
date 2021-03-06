@@ -1,3 +1,66 @@
+<?php ob_start(); ?>
+<?php session_start(); ?>
+<?php  include "includes/db.php"; ?>
+<?php  include "includes/functions.php"; ?>
+    
+<?php 
+
+if(isset($_SESSION['UsersID'])) {
+    
+    $user_id = $_SESSION['UsersID'];
+    
+    $query = "SELECT * FROM users WHERE UsersID = $user_id ";
+    $select_user_data = mysqli_query($connection, $query);
+    
+    if (!$select_user_data) {
+
+            die("QUERY FAILED" . mysqli_error($connection));
+
+    }
+    
+    while ($row = mysqli_fetch_array($select_user_data)) {
+
+		$db_UsersID = $row['UsersID'];
+		$db_FirstName = $row['FirstName'];
+		$db_EmailID = $row['EmailID'];
+		$db_IsEmailVerified	 = $row['IsEmailVerified'];
+		$db_Password = $row['Password'];
+        
+		}
+    
+    
+}else {
+    
+}
+
+
+if(isset($_POST['submit'])) {
+
+$to         = "notemarketplace00@gmail.com";
+$firstname    = $_POST['firstname'];
+$subject    = $_POST['subject'];
+$message      = $_POST['comment'];
+$email      = $_POST['email'];
+$from     = $db_EmailID;
+
+$body =  "";
+    
+$body .= "From: " . $firstname . "\r\n";
+$body .= "Email: " . $email . "\r\n";
+$body .= "Message: " . $message . "\r\n";
+    
+if(mail($to,$subject,$body))
+{
+    echo "wwhhhhhhhhhooooooooooooo";
+}else{
+    echo "ohhhhh nnnnnooooooo";
+}
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,109 +103,14 @@
 <body>
 
 	<!-- Header -->
-	<header>
-		<div class="wrapper">
-			<nav class="navbar navbar-expand-md">
-				<div class="container">
+    <?php
+	    if(isset($_SESSION['UsersID'])) {    
+            include "includes/login_nav.php"; 
+        }else {
+            include "includes/logoff_nav.php";
+        }
+    ?>
 
-					<!-- logo -->
-						<a class="navbar-brand" href="#">
-							<img src="../images/Front_images/logo.png" alt="logo">
-						</a>
-
-						<!-- Mobile Menu Open Button -->
-						<span id="mobile-nav-open-btn">&#9776;</span>
-
-					<!-- Main Menu-->
-					<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-						<ul class="nav navbar-nav pull-right">
-							<li class="nav-item">
-								<a class="item" href="search-notes.html">Search Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="add-notes.html">Sell Your Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="buyer-request.html">Buyer Request</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="faq.html">FAQ</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="contact-us.html">Contact Us</a>
-							</li>
-							<li>
-								<div class="dropdown">
-									<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="../images/Front_images/user-img.png" alt="user image" class="user-img img-responsive rounded-circle">
-									</a>
-									
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    									<a class="dropdown-item" href="user-profile.html">my profile</a>
-    									<a class="dropdown-item" href="my-downloads.html">my downloads</a>
-    									<a class="dropdown-item" href="my-sold-notes.html">my sold notes</a>
-    									<a class="dropdown-item" href="my-rejected-notes.html">my rejected notes</a>
-										<a class="dropdown-item" href="change-password.html">change password</a>
-										<a class="dropdown-item logout-btn" href="login.html">logout</a>
-									</div>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="btn btn-primary" href="login.html" type="button" role="button">Logout</a>
-							</li>
-						</ul>
-					</div>
-					
-					<!-- Mobile Menu-->
-					<div id="mobile-nav">
-
-						<!--Mobile Menu Close Button -->
-						<span id="mobile-nav-close-btn">&times;</span>
-
-						<div id="mobile-nav-content">
-							<ul class="nav">
-							<li class="nav-item">
-								<a class="item" href="search-notes.html">Search Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="add-notes.html">Sell Your Notes</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="buyer-request.html">Buyer Request</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="faq.html">FAQ</a>
-							</li>
-							<li class="nav-item">
-								<a class="item" href="contact-us.html">Contact Us</a>
-							</li>
-							<li>
-								<div class="dropdown">
-									<a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img src="../images/Front_images/user-img.png" alt="user image" class="user-img img-responsive rounded-circle">
-									</a>
-									
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    									<a class="dropdown-item" href="user-profile.html">my profile</a>
-    									<a class="dropdown-item" href="my-downloads.html">my downloads</a>
-    									<a class="dropdown-item" href="my-sold-notes.html">my sold notes</a>
-    									<a class="dropdown-item" href="my-rejected-notes.html">my rejected notes</a>
-										<a class="dropdown-item" href="change-password.html">change password</a>
-										<a class="dropdown-item logout-btn" href="login.html">logout</a>
-									</div>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="btn btn-primary" href="#" type="button" role="button">Logout</a>
-							</li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			</nav>
-		</div>
-	</header>
 	<!-- Header Ends -->
 	
 <!-- Top Content -->
@@ -260,13 +228,13 @@
 			<div class="container">
 				<div class="row copyright">
 
-						<div class="col-md-6">
+					<div class="col-md-6 col-sm-12">
 						<p class="pera">
 							Copyright &copy; Tatvasoft All Rights Reserved.
 						</p>
 					</div>
 
-					<div class="col-md-6 justify-content-end">
+					<div class="col-md-6 col-sm-12 justify-content-end">
 						<ul class="social-list ">
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -279,6 +247,7 @@
 		</div>
 
 	</footer>
+
 	<!-- Footer Ends -->
 
 	<!-- User Profile Ends -->

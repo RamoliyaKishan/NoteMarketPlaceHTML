@@ -13,7 +13,7 @@ section {
 }
 
 .container-fluid{
-	width: 1440px;
+	width: 1450px;
 	padding: 0;
 }
 
@@ -124,12 +124,46 @@ ul.navbar-nav > li a.btn {
 	margin-left: 30px;
 	padding-top: 8px;;
 	text-transform: capitalize;
-}
+} 
 
 ul.navbar-nav > li a.btn:focus,
 ul.navbar-nav > li a.btn:hover {
 	outline: none;
 	background-color: darkslateblue;
+}
+
+/* Profiel Dropdown */
+.dropdown-menu {
+	padding: 20px 0;
+	border: none;
+	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+	z-index: 4;
+}
+
+.dropdown a.dropdown-item {
+	margin: 0	;
+	color: #333333;
+	text-transform: capitalize;
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	padding: 0 50px 0 30px;
+} 
+
+.dropdown a.dropdown-item:hover, .dropdown a.dropdown-item:focus {
+	margin: 0;
+	color: #fff;
+	background-color: #6255a5;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.dropdown a.logout-btn {
+	color: #6255a5;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 /*==============================
@@ -242,6 +276,156 @@ ul.navbar-nav > li a.btn:hover {
 }
 
 /*==============================
+|	|	|	User Profile form
+================================*/
+
+.myForm {
+	background: #fff;
+	border-radius: 3px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.myForm .form-group {
+	margin: 0;
+}
+
+h2.heading {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 40px;
+}
+
+.myForm .form-label {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #333333;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.myForm .myInput {
+	padding: 0;
+	margin: 0;
+	padding-left: 10px;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+}
+
+.myForm .myInput[value] {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #8a8a8a;
+}
+
+.myForm .myInput:focus,
+.myForm .myInput:hover {
+	outline: none;
+	border: 1px solid #6255a5;
+}
+
+/*profile picture image*/
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload label.myInput img {
+	width: 50px;
+	height: 46px;
+    cursor: pointer;
+}
+
+.image-upload label.myInput p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #adb5bd;
+} 
+
+.image-upload label.myInput{
+	padding-top: 17px;
+	height: 100px;
+	margin-bottom: 0;
+}
+
+/*birthdate*/
+
+.myForm .btn {
+	background-color: #6255a5;
+	color: #fff;
+	border-radius: 3px;
+	width: 480px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.myForm .btn:focus,
+.myForm .btn:hover {
+	outline: none;
+	background-color: darkslateblue;
+}
+
+.field-icon {
+	font-size: 20px;
+	float: right;
+	margin-right: 15px;
+	margin-top: -65px;
+	position: relative;
+	color: #8a8a8a;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.myForm .country-code {
+	width: 23%;
+}
+
+.myForm .phone-no {
+	float: right;
+	width: 75%;
+}
+
+/*Arraw Down*/
+.arrow-down {
+	height: 11px;
+	width: 18px;
+	float: right;
+	margin-right: 15px;
+	margin-top: -30px;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.user-profile-right select.country-code {
+	margin-bottom: 0;
+}
+
+/*remove bottom margin*/
+.last input.myInput {
+	margin-bottom: 0;
+}
+
+.last input.btn {
+	width: 150px;
+	height: 50px;
+	margin-bottom: 60px;
+}
+
+/*==============================
 |	|	|	footer
 ================================*/
 
@@ -252,7 +436,6 @@ footer .container-fluid{
 footer .content-box-lg {
 	border-top: 2px solid #d1d1d1;
 	padding: 40px 0;
-	margin-top: 50px;
 }
 
 footer p.pera {
@@ -306,141 +489,6 @@ ul.social-list li:nth-child(3) a:hover {
 	border-color: transparent;
 }
 
-/*==============================
-|	|	|	User Profile Img
-================================*/
-
-.user-profile-img {
-	height: auto;
-	min-width: 100%;
-}
-
-/*==============================
-|	|	|	Notes Detais form
-================================*/
-
-.myForm {
-	background: #fff;
-	border-radius: 3px;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-}
-.myForm .form-group {
-	margin: 0;
-}
-p.pera{
-	margin: 10px 0 40px 0;
-}
-
-.myForm .form-label {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	color: #333333;
-	margin-bottom: 10px;
-	text-align: left;
-}
-
-.myForm .myInput {
-	padding: 0;
-	margin: 0;
-	padding-left: 10px;
-	border: 1px solid #d1d1d1;
-	border-radius: 3px;
-	width: 100%;
-	height: 50px;
-	margin-bottom: 30px;
-}
-
-.myForm .myInput[value] {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	color: #000;
-}
-
-.myForm .myInput:focus,
-.myForm .myInput:hover {
-	outline: none;
-	border: 1px solid #6255a5;
-}
-
-.myForm .btn {
-	background-color: #6255a5;
-	color: #fff;
-	border-radius: 3px;
-	width: 150px;
-	height: 50px;
-	font-size: 18px;
-	line-height: 22px;
-	text-transform: uppercase;
-}
-
-.myForm .btn:focus,
-.myForm .btn:hover {
-	outline: none;
-	background-color: darkslateblue;
-}
-
-.myForm #comment {
-	height: 274px;
-}
-.myForm #comment[value] {
-	padding-top: 10px;
-}
-
-/*remove bottom margin*/
-.last input.myInput {
-	margin-bottom: 0;
-}
-
-/*Buttons*/
-
-.buttons {
-	margin-top: 30px;
-	display: block;
-}
-/* Profiel Dropdown */
-.user-img {
-        height: 40px;
-        width: 40px;
-    }
-.dropdown-menu {
-	padding: 20px 0;
-	border: none;
-	-webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
-	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
-	z-index: 4;
-}
-
-.dropdown a.dropdown-item {
-	margin: 0	;
-	color: #333333;
-	text-transform: capitalize;
-	background-color: #fff;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 30px;
-	padding: 0 50px 0 30px;
-} 
-
-.dropdown a.dropdown-item:hover, .dropdown a.dropdown-item:focus {
-	margin: 0;
-	color: #fff;
-	background-color: #6255a5;
-	-webkit-transition: all .3s linear;
-	transition: all .3s linear;
-}
-
-.dropdown a.logout-btn {
-	color: #6255a5;
-	text-transform: uppercase;
-	font-weight: 600;
-}
-
-
 /*==================================================
 			Bootstrap 3 Media Queries        
 ==================================================*/
@@ -474,7 +522,13 @@ p.pera{
 	p.pera {
 		font-size: 16px;
 	}
-
+	
+	/*Buttons*/
+	.myForm .btn {
+		width: 120px;
+		height: 40px;
+	
+	}
 }
 
 /* Small Devices (Portrait Tablets & Small Desktops) */
@@ -485,7 +539,6 @@ p.pera{
 	#mobile-nav-open-btn {
 		display: none;
 	}
-	
     /* Navigation */
 	header .container-fluid {
 	margin: 0;
@@ -494,25 +547,18 @@ p.pera{
 		padding: 0;
 	}
 	a.navbar-brand img {
-		width: 170px;
+		width: 180px;
 		height: 30px;
 	}
 	ul.navbar-nav > li a {
-		font-size: 12px;
-		margin-left: 10px;
+		font-size: 14px;
+		margin-left: 20px;
 	}
 	ul.navbar-nav > li a.btn {
-		font-size: 13px;
-		margin-left: 10px;
-		height: 30px;
-		width: 60px;
-		padding-top: 3px;
-		margin-top: 3px;
-	}
-	img.user-img {
+		font-size: 14px;
+		margin-left: 20px;
 		height: 35px;
-		width: 35px;
-		margin-top: 3px;
+		width: 80px;
 	}
 	
     /* Generic */
@@ -596,7 +642,7 @@ p.pera{
 	
 	/*Forms*/
 	
-	h2.heading,p.pera {
+	h2.heading {
 		text-align: center;
 	}
 	/* Remove last field's margin */
@@ -607,7 +653,12 @@ p.pera{
 	.myForm .btn {
 		width: 90px;
 		height: 35px;
-		margin: 0
+	}
+	.myForm #save {
+		margin: 0;
+	}
+	.myForm #publish {
+		margin: 0;
 	}
 	
 	.myForm .form-label {
@@ -624,11 +675,20 @@ p.pera{
 		font-size: 14px;
 	}
 	
-	#comment.myInput {
-		height: 100px;
-		margin-bottom: 0;
+	.field-icon {
+		margin-top: -50px;
 	}
-	
+	img#country-arrow.field-icon {
+		margin-top: -80px;
+	}
+	.last input.myInput {
+		margin-bottom: 20px;
+	}
+	.last input.btn {
+		width: 100px;
+		height: 35px;
+		margin-bottom: 20px;
+	}
 }
 
 /* Extra Small Devices (Portrait Phones & Smaller Devices) */
@@ -644,4 +704,5 @@ p.pera{
 		line-height: 28px;	
 	}
 }
+
 

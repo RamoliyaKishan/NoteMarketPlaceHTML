@@ -1,0 +1,209 @@
+/*==============================
+|	|	|	General
+================================*/
+
+html,
+body {
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+}
+
+section {
+	overflow: hidden;
+}
+
+/*==============================
+|	|	|	login
+================================*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	width: auto;
+	height: auto;
+	position: absolute;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1;
+	margin: auto;
+}
+
+#heading-img {
+	margin-bottom: 50px;
+}
+
+.content {
+	background: #fff;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	margin: 0;
+	padding: 30px;
+	position: relative;
+	width: 600px;
+}
+
+.content h2 {
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #6255a5;
+	margin: 0;
+	padding: 0 0 30px 0;
+}
+
+.content p > span {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	color: #333333;
+}
+
+
+.content p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #333333;
+	padding-bottom: 20px;
+	margin: 0;
+}
+
+.content .btn {
+	background-color: #6255a5;
+	color: #fff;
+	border-radius: 3px;
+	width: 540px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+
+.content .btn:focus, .content .btn:hover {
+	outline: none;
+	background-color: darkslateblue;
+}
+
+/*==================================================
+			Bootstrap 3 Media Queries        
+==================================================*/
+
+/* Large Devices (Desktops & Laptops) */
+
+@media (min-width: 1200px) {
+    
+}
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    #heading-img {
+	    margin-bottom: 35px;
+    }
+    .content {
+	    width: 500px;
+    }
+    .content .btn {
+	    width: 440px;
+    	height: 40px;
+    	font-size: 16px;
+	    line-height: 20px;
+	    margin-top: 25px;
+    }
+}
+/* Small Devices (Portrait Tablets & Small Desktops) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#heading-img {
+	    margin-bottom: 35px;
+    }
+    .content {
+	    width: 500px;
+    }
+    .content .btn {
+	    width: 440px;
+    	height: 40px;
+    	font-size: 16px;
+	    line-height: 20px;
+	    margin-top: 25px;
+    }
+}
+
+/* Extra Small Devices (Landscap Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+	#heading-img {
+        margin-bottom: 30px;
+    }
+    img{
+        width: 200px;
+        height: 35px;
+    }
+    .content h2 {
+        font-size: 23px;
+        padding-bottom: 20px;
+    }
+    .content p > span {
+        font-size: 16px;
+    }
+    .content p {
+        font-size: 14px;
+        line-height: 16px;
+        padding-bottom: 10px;
+}
+    .content {
+	    width: 350px;
+        padding: 20px;
+    }
+    .content .btn {
+	    width: 310px;
+    	height: 35px;
+    	font-size: 16px;
+	    line-height: 20px;
+	    margin-top: 25px;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 430px) {
+	#heading-img {
+        margin-bottom: 20px;
+    }
+    img{
+        width: 150px;
+        height: 25px;
+    }
+    .content h2 {
+        font-size: 20px;
+        padding-bottom: 22px;
+    }
+    .content p > span {
+        font-size: 14px;
+    }
+    .content p {
+        font-size: 13px;
+        line-height: 15px;
+        padding-bottom: 10px;
+}
+    .content {
+	    width: 300px;
+    }
+    .content .btn {
+	    width: 260px;
+    	height: 35px;
+    	font-size: 14px;
+	    line-height: 17px;
+	    margin-top: 20px;
+    }
+}
