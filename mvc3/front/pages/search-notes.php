@@ -217,7 +217,7 @@
                                 <div class="col-md-2 col-sm-4" style="padding: 0 0 0 10px">
                                     <div class="form-group">
                                         <select class="myInput common" id="rating" name="rating">
-                                            <option selected disabled>Select rating</option>
+                                            <option value="0">Select rating</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>

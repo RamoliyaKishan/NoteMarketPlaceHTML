@@ -156,47 +156,8 @@ if(isset($_SESSION['UsersID'])) {
 
 </head>
 
-<body>
-
-	<head>
-
-		<!-- meta tags -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-		<!-- Title -->
-		<title>Market Notes</title>
-	
-	
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="../images/Admin_images/favicon.ico">
-	
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-	
-		<!-- FontAwesome -->
-		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
-	
-		<!-- Jquery UI -->
-		<link rel="stylesheet" href="../css/jquery-ui/jquery-ui.css">
-		<link rel="stylesheet" href="../css/jquery-ui/jquery-ui.structure.css">
-		<link rel="stylesheet" href="../css/jquery-ui/jquery-ui.theme.css">
-	
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
-		
-		<!-- DataTable CSS -->
-		<link rel="stylesheet" href="../css/DataTables/datatables.css">
-	
-		<!-- Custom Css -->
-		<link rel="stylesheet" href="../css/add-administrator.css">
-	
-	</head>
-	
-	<body>
-	
-		
+<body>  	
+    
 	<!-- Header -->
 	<?php
 	    if(isset($_SESSION['UsersID'])) {  
@@ -290,52 +251,8 @@ if(isset($_SESSION['UsersID'])) {
 	
 	</section>
 	
-	<!-- Footer -->
-	<footer>
-
-		<div class="content-box-lg">
-			<div class="container">
-				<div class="row copyright">
-					
-					<div class="col-md-6 col-sm-12">
-						<p class="pera">
-							Version : 1.1.24
-						</p>
-					</div>
-
-					<div class="col-md-6 col-sm-12 text-right">
-						<p class="pera">
-							Copyright &copy; Tatvasoft All Rights Reserved.
-						</p>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-
-	</footer>
-	<!-- Footer Ends -->
-
-	<!-- User Profile Ends -->
-
-	<!-- Add jquery-->
-	<script src="../js/jquery.min.js"></script>
-	
-	<!-- jquery UI-->
-	<script src="../js/jquery-ui/jquery-ui.js"></script>
-	
-	<!-- Bundle/Proper js -->
-	<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
-
-	<!-- Bootstrap js -->
-	<script src="../js/bootstrap/bootstrap.min.js"></script>
-	
-	<!-- DataTable JS -->
-    <script src="../js/DataTables/datatables.js"></script>
-
-	<!-- Custom JS -->
-	<script src="../js/script.js"></script>
+	<!--  footer  -->
+    <?php include('includes/footer.php'); ?>
 
 </body>
 

@@ -22,20 +22,20 @@ if(isset($_SESSION['UsersID'])) {
         $new_password = escape($_POST['new_password']);
         $confirm_password = escape($_POST['confirm_password']);
         
-        $old_password = md5($old_password);
-
-       
-        
+        $old_password = md5($old_password);   
         
         if($old_password == $db_Password){
             
             if($new_password == $confirm_password){
                 
-                $new_password  = md5($new_password);
-                $query = "UPDATE users SET Password = '{$new_password}', ModifiedDate = now(), ModifiedBY = '{$user_id}' where UsersID = '{$user_id}'";
+                $new_enc_password  = md5($new_password);
+                $query = "UPDATE users SET Password = '{$new_enc_password}', ModifiedDate = now(), ModifiedBY = '{$user_id}' where UsersID = '{$user_id}'";
                 $update_pass_query = mysqli_query($connection, $query);
                 
                 if($update_pass_query){
+                    if(isset($_COOKIE['password_cookie'])){ 
+                        setcookie('password_cookie',$new_password);
+                    }
                     ($db_RoleID == '1') ? redirect('index.php') : redirect('../../admin/pages/dashboard.php');
                 }else { 
                     echo "query fail" . mysqli_error($connection);

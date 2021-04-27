@@ -23,8 +23,8 @@
             $query .= "AND Country = '{$_POST['country']}'";
         }
         if(!empty($_POST['rating'])){
-            $query .= "AND NoteID = (SELECT sn.NoteID FROM seller_notes AS sn INNER JOIN seller_notes_reviews AS snr ON sn.NoteID = snr.NoteID WHERE snr.Ratings = '{$_POST['rating']}')";
-        }
+            
+            $query .= " AND (SELECT CEIL(AVG(Ratings)) FROM seller_notes_reviews WHERE seller_notes_reviews.NoteID = seller_notes.NoteID and seller_notes_reviews.IsActive = 1) >= {$_POST["rating"]}";
 
         $result = mysqli_query($connection, $query);
         if(!$result){

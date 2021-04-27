@@ -5,7 +5,7 @@
 
 
 <?php
-
+    
     if(isset($_POST['login'])){
         
         $email_message = "";
@@ -13,7 +13,7 @@
         
 		$email = escape($_POST['email']);
 		$password = escape($_POST['password']);
-        $password = md5($password);
+        $enc_password = md5($password);
         
 		$query = "SELECT * FROM users WHERE EmailID = '{$email}'";
 		$select_user_query = mysqli_query($connection, $query);
@@ -37,11 +37,18 @@
             if($db_IsActive == '0') {
                 $email_message .= "This Email id is not active";
             }else {
-                if($password == $db_Password){
+                if($enc_password == $db_Password){
                     if($db_IsEmailVerified == '1') {
+                        if(isset($_POST['check'])){
+                            setcookie('email_cookie',$email, time()+(86400 * 365));
+                            setcookie('password_cookie',$password, time()+(86400 * 365));
+                        }else {
+                            setcookie('email_cookie',$email,30);
+                            setcookie('password_cookie',$password, 30);
+                        }
                         if(is_member($email)) {
                             $_SESSION['UsersID'] = $db_UsersID;
-                            redirect("index.php" );
+                            redirect("search-notes.php" );
                         }
                         else {
                             $_SESSION['UsersID'] = $db_UsersID;
@@ -140,7 +147,7 @@
                             
                             ?>
 							<label for="user_email" class="form-label">Email</label>
-							<input style = "<?php echo $input_css; ?>" class="myInput" placeholder="Enter your Email eddress" type="email" id="email" name="email" value="" required>
+							<input style = "<?php echo $input_css; ?>" class="myInput" placeholder="Enter your Email eddress" type="email" id="email" name="email" value="<?php if(isset($_COOKIE['email_cookie'])){ echo $_COOKIE['email_cookie']; } ?>" required>
 							<p style = "<?php echo $message_css; ?>" ><?php echo $email_message; ?></p>
 							
 						</div>
@@ -159,7 +166,7 @@
                             
                             ?>
 							<a class="forgot-password" href="forgot-password.php">Forgot Password?</a><br>
-							<input style = "<?php echo $input_css; ?>" class="myInput" type="password" id="password" name="password" placeholder="enter your Password" value="" required>
+							<input style = "<?php echo $input_css; ?>" class="myInput" type="password" id="password" name="password" placeholder="enter your Password" value="<?php if(isset($_COOKIE['password_cookie'])){ echo $_COOKIE['password_cookie']; } ?>" required>
 							<span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                            <p style = "<?php echo $message_css; ?>" ><?php echo $pass_message; ?></p>
                             
@@ -167,7 +174,7 @@
 
 						<div class="form-group text-left">
 
-							<input class="myInput check" id="check" name="check" type="checkbox" value="Remember Me">
+							<input class="myInput check" id="check" name="check" type="checkbox" value="Remember Me" <?php if(isset($_COOKIE['password_cookie'])){ echo 'checked'; } ?>>
 							<label for="check" class="form-label rememberme">Remember Me</label>
 
 						</div>
