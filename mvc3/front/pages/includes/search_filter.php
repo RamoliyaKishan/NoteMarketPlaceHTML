@@ -25,7 +25,7 @@
         if(!empty($_POST['rating'])){
             
             $query .= " AND (SELECT CEIL(AVG(Ratings)) FROM seller_notes_reviews WHERE seller_notes_reviews.NoteID = seller_notes.NoteID and seller_notes_reviews.IsActive = 1) >= {$_POST["rating"]}";
-
+        }
         $result = mysqli_query($connection, $query);
         if(!$result){
             echo "error" . mysqli_error($connection);
